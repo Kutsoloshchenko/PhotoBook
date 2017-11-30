@@ -1,0 +1,34 @@
+.auth {
+    max-width: 265px;
+    float: center;
+    margin-top: 10%;
+    margin-left: 40%;
+}
+
+sign-in {
+    float: left;
+}
+
+.buttons {
+    padding-bottom: 30px; 
+}
+
+.auth button {
+    
+        min-width: 132.5px;
+        min-height: 30px;
+        float: left;
+        background-color: #77CBFF;
+        color: white;
+        border: 1px solid #77CBFF;
+        text-align: center;
+        background-image: none;
+        -webkit-appearance: none;
+    
+    }
+    
+.auth button:hover {
+        
+        background: #C9EBFF;
+        cursor: pointer;
+    }

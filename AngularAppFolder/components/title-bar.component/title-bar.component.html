@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="label-item">
+        <a ngIf="username === null" class= "label-item" routerLink="main" routerLinkActive = "active">Photo Book</a>
+        <a ngIf="username" class= "label-item" routerLink="main" routerLinkActive = "active">{{username}}}</a>
+    </div>
+        <div *ngIf="username" class="links">
+            <div class="link">
+                    <a (click) = "logOut()" routerLink="sign_up" routerLinkActive = "active">Sign Out</a>
+            </div>
+    </div>
+</div>

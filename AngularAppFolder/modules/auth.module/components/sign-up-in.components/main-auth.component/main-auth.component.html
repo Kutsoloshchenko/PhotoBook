@@ -1,0 +1,10 @@
+<div class="auth">
+    <div>
+        <div class= "buttons">
+            <button (click)="switch_to_show('sign_in')">Sign In</button>
+            <button (click)="switch_to_show('sign_up')">Sign Up</button>
+        </div>
+        <sign-up *ngIf="what_to_show === 'sign_up'"></sign-up>
+        <sign-in *ngIf="what_to_show === 'sign_in'"></sign-in>
+    </div>
+</div>
