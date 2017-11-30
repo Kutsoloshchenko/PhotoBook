@@ -39,8 +39,7 @@ class DataBaseHandler:
         else:
             return None, None
 
-    def get_entrys_attributes(self, alias, key_argument, attributes):
-        dict = {key_argument[0]: key_argument[1]}
+    def get_entrys_attributes(self, alias, dict, attributes):
         entrys = ALIASES[alias].objects.filter(**dict)
 
         iter_object = [(entry, attributes) for entry in entrys]

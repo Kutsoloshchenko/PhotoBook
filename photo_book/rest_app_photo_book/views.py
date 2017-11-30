@@ -48,8 +48,8 @@ def sign_in(request):
 def create_album(request):
 
     if request.method == 'GET':
-        data = {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFzZGZ1ayIsImlkIjoyfQ.MB1FGWMIfkfUsSMHZuwuG5_GAs4ItlE1j39QzwYbN1A",
-                "username": "asdfuk",
+        data = {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc29uZSIsImlkIjo1fQ.W2nU_m6WdGoJI9WGqYS0jn2PQuIqkVEqr0iYSl_qE-A",
+                "username": "tesone",
                 "folder_name": "newShit2"}
 
     elif request.method == 'POST':
@@ -93,8 +93,8 @@ def get_albums(request):
 
     if request.method == 'GET':
 
-        data = {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFzZGZ1ayIsImlkIjoyfQ.MB1FGWMIfkfUsSMHZuwuG5_GAs4ItlE1j39QzwYbN1A",
-                "username": "asdfuk"}
+        data = {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InRlc29uZSIsImlkIjo1fQ.W2nU_m6WdGoJI9WGqYS0jn2PQuIqkVEqr0iYSl_qE-A",
+                "username": "tesone"}
 
     elif request.method == 'POST':
         data = request.data

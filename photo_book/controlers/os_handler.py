@@ -64,12 +64,14 @@ class OsHandler:
 
     def get_albums(self, owner_name):
         folders = self._db.get_entrys_attributes("folders", {"owner": owner_name}, ("name",))
-        print(folders)
 
         if folders:
-            return {"result": "Ok", "albums": str(folders)}
+            result = []
+            for i in folders:
+                result.append({"name": i[0], "result": "Ok"})
+            return result
         else:
-            return {"result": "No Albums", "message": "You dont have any albums"}
+            return {"result": "No Albums", "error_message": "You dont have any albums"}
 
     def get_album_content(self, owner_name, album_name):
         content = self._db.get_entry_attributes("folders", {"owner": owner_name, "name": album_name}, ("content",))
@@ -136,4 +138,5 @@ class OsHandler:
     def delete_album(self, owner_name, album_name):
         shutil.rmtree(os.path.join(self._base_folder, owner_name, album_name))
         self._db.delete_entry("folders", {"owner": owner_name, "name": album_name})
+        return {"result": "Ok"}
 
