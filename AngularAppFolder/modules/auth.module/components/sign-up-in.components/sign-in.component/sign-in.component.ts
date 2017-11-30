@@ -41,7 +41,7 @@ export class SignInComponent {
                                                 else {
                                                     // If everything is okay - then same username and jwt tokken to client
                                                     this.jwtService.logUserIn(server_response.username, server_response.token)
-                                                    this.router.navigateByUrl("main")
+                                                    this.router.navigateByUrl("albums/"+ this.jwtService.getUserName())
                                                 }
                                             }
                             

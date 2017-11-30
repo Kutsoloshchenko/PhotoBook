@@ -56,7 +56,7 @@ export class SignUpComponent {
                                           else {
                                               // should redirect to user verify step, but currently on prints something
                                               this.jwtService.logUserIn(server_response.username, server_response.token)
-                                              this.router.navigateByUrl("main")
+                                              this.router.navigateByUrl("albums/"+ this.jwtService.getUserName())
                                           }
                               
                                       }

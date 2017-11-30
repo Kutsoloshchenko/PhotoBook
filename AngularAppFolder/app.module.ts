@@ -13,6 +13,7 @@ import { JWTAuthService } from "./services/jwt-auth.service"
 
 import { AppRouterModule } from "./app-router.module";
 import { AuthModule } from "./modules/auth.module/auth.module"
+import { AlbumsModule } from "./modules/albums.module/albums.module"
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { AuthModule } from "./modules/auth.module/auth.module"
     FormsModule,
     HttpModule,
     AuthModule,
+    AlbumsModule,
     AppRouterModule
   ],
   providers: [JWTAuthService],

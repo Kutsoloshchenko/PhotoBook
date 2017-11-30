@@ -2,26 +2,28 @@
 
 import { Component} from "@angular/core";
 import { JWTAuthService } from "../../../../services/jwt-auth.service"
-import { AlbumService } from "../../services//album.service"
+import { PhotoService } from "../../services//photo.service"
 import { Router } from "@angular/router"
 import { OnInit } from "@angular/core/src/metadata/lifecycle_hooks";
-import { Album } from '../../classes/album';
+import { Photo } from '../../classes/photo';
 
 @Component({
     selector: "user-folder",
     templateUrl: "./user-folder.component.html",
     styleUrls: ["./user-folder.component.css"]
 })
-export class UserFolderComponent implements OnInit {
+export class AlbumComponent implements OnInit {
     /*Name of the logged in user */
     username: string;
 
-    albums: Album[];
+    album: string;
 
-    create_album_name: string;
+    Photos: Photo[];
+
+    create_photo_name: string;
     
     /*Constructor in whitch jwtAuth service is injected */
-    constructor(private jwtAuth: JWTAuthService, private albumService: AlbumService){}
+    constructor(private jwtAuth: JWTAuthService, private photoService: PhotoService){}
 
     ngOnInit(): void {
         

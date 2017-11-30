@@ -1,0 +1,18 @@
+<div class="user_component">
+    <div class="create_album">
+        <label>Create Album</label> 
+        <input [(ngModel)]="create_album_name" placeholder="Album name">
+        <button (click)="CreateAlbum()">Create</button>
+    </div>
+
+    <div *ngIf="albums">
+        <div class="albums" *ngFor="let album of albums">
+                <label>{{album.name}}</label> 
+                <button (click)="CreateAlbum()">View</button>
+                <button (click)="deleteFolder(album.name)">Delete</button>
+                <input [(ngModel)]="album.change_name" placeholder="Rename">
+                <button (click)="changeFolderName(album.name, album.change_name)">Rename</button>
+        </div>
+    </div>
+
+</div>
